@@ -1,5 +1,4 @@
 package com.devsuperior.dto;
-
 import com.devsuperior.entities.Game;
 
 public class GameMinDTO {
