@@ -18,6 +18,16 @@ public class GameController {
     private GameService gameService;
 
     /**
+     * Buscar todos
+     */
+
+    @GetMapping
+    public List<GameMinDTO> findAll() {
+        List<GameMinDTO> result = gameService.findAll();
+        return result;
+    }
+
+    /**
      * Buscar por ID
      */
 
@@ -28,12 +38,6 @@ public class GameController {
     }
 
     /**
-     * Buscar todos
+     * Buscar por listas
      */
-
-    @GetMapping
-    public List<GameMinDTO> findAll() {
-        List<GameMinDTO> result = gameService.findAll();
-        return result;
-    }
 }

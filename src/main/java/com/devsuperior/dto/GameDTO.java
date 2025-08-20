@@ -13,6 +13,10 @@ public class GameDTO {
     private String shortDescription;
     private String longDescription;
 
+    /**
+     * Construtor vazio
+     */
+
     public GameDTO() {
     }
 

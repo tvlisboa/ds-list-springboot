@@ -1,19 +1,32 @@
 package com.devsuperior.entities;
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import java.util.Objects;
 
 /**
  * Classe intermediaria recebendo as chaves estrageiras
+ * multiplas, com mais de um uso
  */
+
 @Embeddable
 public class BelongingPK {
+
+
+    /**
+     * O meu jogo sera mapeado na
+     * tabela game_id
+     */
 
     @ManyToOne
     @JoinColumn(name = "game_id")
     private Game game;
+
+    /**
+     * A minha lista de jogos sera
+     * mapeado na tabela
+     * list_id
+     */
 
     @ManyToOne
     @JoinColumn(name = "list_id")

@@ -2,14 +2,12 @@ package com.devsuperior.services;
 import com.devsuperior.dto.GameDTO;
 import com.devsuperior.dto.GameMinDTO;
 import com.devsuperior.entities.Game;
+import com.devsuperior.projections.GameMinProjection;
 import com.devsuperior.repositories.GameRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class GameService {
@@ -33,8 +31,7 @@ public class GameService {
     @Transactional
     public List<GameMinDTO> findAll() {
         List<Game> result = gameRepository.findAll();
-        List<GameMinDTO> dto = result.stream().map(game -> new GameMinDTO(game)).collect(Collectors.toList());
-        return dto;
+        return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
 }
 
