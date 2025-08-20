@@ -18,5 +18,10 @@ public class GameListService {
         List<GameList> result = gameListRepository.findAll();
         return result.stream().map(x -> new GameListDTO(x)).toList();
     }
+
+    public List<GameListDTO> findByListId(Long listId) {
+        List<GameList> result = gameListRepository.findById(Long listId);
+        return result.stream().map(x -> new GameListDTO(x)).toList();
+    }
 }
 

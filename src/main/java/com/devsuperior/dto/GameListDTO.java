@@ -5,8 +5,16 @@ public class GameListDTO {
     private Long id;
     private String name;
 
+    /**
+     * Construtor vazio
+     */
     public GameListDTO() {
     }
+
+    /**
+     * Construtor com parametros
+     * pra receber as entidades
+     */
 
     public GameListDTO(GameList entity) {
         id = entity.getId();

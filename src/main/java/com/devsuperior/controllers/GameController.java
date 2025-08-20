@@ -37,7 +37,4 @@ public class GameController {
         return result;
     }
 
-    /**
-     * Buscar por listas
-     */
 }
